@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memoria 3D</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Framer Motion (for web) -->
+    <script src="https://unpkg.com/framer-motion@10.16.3/dist/framer-motion.umd.js"></script>
+    <!-- model-viewer -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </head>
+  <body class="bg-gradient-to-br from-gray-50 via-white to-gray-100">
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/80 backdrop-blur z-50 shadow-sm">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <h1 class="text-2xl font-bold">Memoria 3D</h1>
+        <a href="#cta" class="rounded-2xl px-6 py-2 text-lg bg-blue-600 text-white">Book a Demo</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="flex flex-col-reverse md:flex-row items-center max-w-6xl mx-auto px-6 py-16 gap-8">
+      <!-- Text -->
+      <div class="flex-1">
+        <h2 class="text-5xl font-semibold mb-6 leading-tight">
+          Продайте <span class="text-blue-600">більше</span> меморіалів <br />
+          із 3D‑конфігуратором
+        </h2>
+        <p class="text-gray-700 text-lg mb-6">
+          Показуйте клієнтам в реальному часі, як виглядатиме їхній меморіал та одразу рахуйте вартість.
+        </p>
+        <a href="#cta" class="inline-flex items-center gap-2 rounded-2xl text-xl px-8 py-4 bg-blue-600 text-white">
+          Спробувати безкоштовно
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L20 12m0 0l-6.5 7.5M20 12H4"/></svg>
+        </a>
+      </div>
+
+      <!-- 3D model -->
+      <div class="flex-1 w-full h-[420px]">
+        <!-- Replace src with your glb model -->
+        <model-viewer src="models/memorial.glb" ar auto-rotate camera-controls environment-image="neutral" alt="Memorial 3D Model" style="height:100%;width:100%;background:#f9fafb"></model-viewer>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-12 bg-white" id="cta">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+        <ul class="space-y-5 text-lg text-gray-800">
+          <li class="flex items-start gap-3"><span class="text-green-600">✔</span> Миттєва 3D-візуалізація та калькулятор вартості</li>
+          <li class="flex items-start gap-3"><span class="text-green-600">✔</span> White-label під ваш бренд</li>
+          <li class="flex items-start gap-3"><span class="text-green-600">✔</span> CRM-модуль для ведення замовлень</li>
+          <li class="flex items-start gap-3"><span class="text-green-600">✔</span> Каталог шаблонів та кастомних дизайнів</li>
+        </ul>
+        <div class="bg-blue-50 p-8 rounded-2xl shadow-lg flex flex-col justify-center">
+          <h3 class="text-3xl font-bold mb-4">€1 000 / точка / місяць</h3>
+          <p class="text-gray-700 mb-6">
+            Усе включено: необмежена кількість проєктів, зберігання 3D-рендерів, техпідтримка 24/7.
+          </p>
+          <a href="mailto:sales@memoria3d.com" class="rounded-2xl text-xl px-8 py-4 bg-blue-600 text-white text-center">Забронювати демо</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-4xl font-semibold text-center mb-10">Готові шаблони</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <img src="examples/example1.png" alt="example1.png" class="rounded-2xl shadow-lg object-cover w-full h-64" />
+          <img src="examples/example2.png" alt="example2.png" class="rounded-2xl shadow-lg object-cover w-full h-64" />
+          <img src="examples/example3.png" alt="example3.png" class="rounded-2xl shadow-lg object-cover w-full h-64" />
+          <img src="examples/example4.png" alt="example4.png" class="rounded-2xl shadow-lg object-cover w-full h-64" />
+          <img src="examples/example5.png" alt="example5.png" class="rounded-2xl shadow-lg object-cover w-full h-64" />
+          <img src="examples/example6.png" alt="example6.png" class="rounded-2xl shadow-lg object-cover w-full h-64" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6 py-10 text-center text-gray-500">
+        © 2025 Memoria 3D • Made with ❤️ in Ukraine
+      </div>
+    </footer>
+  </body>
+</html>
